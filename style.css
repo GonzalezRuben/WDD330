@@ -1,0 +1,31 @@
+html, body{
+    align: center;
+    background-color: #FFFFC7;
+    font-family: sans-serif;
+    min-width: min-content;
+}
+hr{
+    color: #B0413E;
+}
+h1, h2{
+    text-align: center;
+    color: #548687;
+}
+a{
+    color: #FCAA67;
+}
+a:visited, a:hover{
+    color: #473335;
+}
+ol{
+    text-align: center;
+    list-style: none inside none;
+}
+li{
+    font-size: 1.2em;
+}
+p{
+    text-align: center;
+    color: #473335;
+    font-family: sans-serif;
+}
