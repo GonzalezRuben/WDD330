@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content= "width=device-width initial-scale=1.0">
+    <title>WDD330 - Ruben Gonzalez - Week 2</title>
+    <meta name="description" content="WDD330 Exercise Repository">
+    <link href="../style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.ico">
+</head>
+<body>
+<h1>W02 Team Activity</h1>
+<input id="in" type="text">
+<input id="in2" type="text">
+<div id = functionID></div>
+<input type="button" value="First Function" onclick="myFunction()">
+<input type ="button" value="Second Function" onclick="secFunction()">
+<input type="button" value="Add" onclick="thirdFunction()">
+<script>
+    const functionID = document.getElementById("functionID");
+    function myFunction(){
+        const input = document.getElementById("in").value;
+        functionID.innerHTML = "Input: " + input;
+    }
+    function secFunction() {
+        const input = document.getElementById("in").value;
+        if (input !== NaN) {
+            //I tried to use regex /\d/ but somehow it stopped working
+            functionID.innerHTML = "Total: " + sum(parseInt(input));
+        } else {
+            functionID.innerHTML = "Input not a number. Try again."
+        }
+        function sum(num) {
+            let total = 0;
+            for (let i = 0; i <= num; i++) {
+                total += i;
+            }
+            return total;
+        }
+    }
+    function thirdFunction(){
+        const input = document.getElementById("in").value;
+        const input2 = document.getElementById("in2").value;
+        let total = parseInt(input) + parseInt(input2);
+        functionID.innerHTML = input + " + " + input2 + " = " + total + ".";
+    }
+</script>
+</body>
+</html>
